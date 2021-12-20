@@ -1,0 +1,220 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+h1 {
+  color: #ff8400;
+}
+
+h2 {
+  color: #0d683d;
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+p, li {
+  color: #524333;
+  font-size: 22px;
+}
+
+button {
+  background-color: #0d683d;
+  border: #0d683d;
+  border-radius: 15px;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e4f7ee;
+  color: #0d683d;
+}
+
+footer {
+  margin: auto 0px 0px 0px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer img {
+  width: 150px;
+}
+
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: inline;
+          flex-direction: inline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+}
+
+#navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 3px 0 #e3e3e3, 0 1px 1px 0 #e3e3e3, 0 2px 1px -1px #e3e3e3;
+          box-shadow: 0 1px 3px 0 #e3e3e3, 0 1px 1px 0 #e3e3e3, 0 2px 1px -1px #e3e3e3;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: inline;
+          flex-direction: inline;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#navbar button {
+  margin: 10px 10px 10px auto;
+  border-radius: 15px 5px 30px 5px;
+  padding: 10px 25px 10px 15px;
+}
+
+#navbar img {
+  margin: 10px;
+  width: 80px;
+}
+
+#hero {
+  background-image: url("./images/Hero Herstel Plus-cutout.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: inline;
+          flex-direction: inline;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#hero #hero-title {
+  color: white;
+  margin-top: 75px;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+
+#problem-section, #solution-section, #program-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e4f7ee;
+  background-image: url("./images/background-cutout.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 50px;
+}
+
+#problem-section h2, #solution-section h2, #program-section h2 {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+#problem-section #card-container, #solution-section #card-container, #program-section #card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: inline;
+          flex-direction: inline;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#problem-section .explainer-card, #solution-section .explainer-card, #program-section .explainer-card {
+  -webkit-box-shadow: 0 15px 15px 0 #e3e3e3, 0 15px 5px -10px #e3e3e3, 0 5px 10px 0 #e3e3e3;
+          box-shadow: 0 15px 15px 0 #e3e3e3, 0 15px 5px -10px #e3e3e3, 0 5px 10px 0 #e3e3e3;
+  width: 70%;
+  height: 400px;
+  border-radius: 15px 15px 100px 0px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #009512;
+}
+
+#problem-section .explainer-card h3, #solution-section .explainer-card h3, #program-section .explainer-card h3, #problem-section .explainer-card p, #solution-section .explainer-card p, #program-section .explainer-card p, #problem-section .explainer-card li, #solution-section .explainer-card li, #program-section .explainer-card li {
+  color: white;
+}
+
+#solution-section {
+  background-image: none;
+  background-color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  #hero {
+    height: 39vh;
+  }
+  #card-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .explainer-card {
+    height: 300px;
+  }
+  p {
+    font-size: 32px;
+  }
+}
+/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,156 @@
+$text-color: #524333;
+$title-color: #ff8400;
+$subheading-color: rgb(13, 104, 61);
+$shadow: 0 1px 3px 0 rgb(227, 227, 227), 0 1px 1px 0 rgb(227, 227, 227), 0 2px 1px -1px rgb(227, 227, 227);
+$section: 100px 50px;
+$card: 0 15px 15px 0 rgb(227, 227, 227), 0 15px 5px -10px rgb(227, 227, 227), 0 5px 10px 0 rgb(227, 227, 227);
+
+@mixin flexMiddle($direction, $align){
+    display: flex;
+    justify-content: center;
+    flex-direction: $direction;
+    align-items: $align;
+}
+
+@mixin backgroundImage(){
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+h1{
+    color: $title-color;
+}
+
+h2{
+    color: $subheading-color;
+    font-size: 50px;
+}
+
+h3{
+    font-size: 40px;
+}
+
+p, li{
+    color: $text-color;
+    font-size: 22px;
+}
+
+button{
+    background-color: $subheading-color;
+    border: $subheading-color;
+    border-radius: 15px;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    &:hover{
+        background-color: #e4f7ee;
+        color: $subheading-color;
+    }
+}
+
+footer{
+    margin: auto 0px 0px 0px;
+    padding: 20px;
+    @include flexMiddle(column, center);
+    img{
+        width: 150px;
+    }
+    div{
+        @include flexMiddle(inline, center);
+        justify-content: space-evenly; 
+        width: 100%;
+    }
+}
+
+#navbar{
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    box-shadow: $shadow;
+    height: auto;
+    @include flexMiddle(inline, flex-start);
+    button{
+        margin: 10px 10px 10px auto;
+        border-radius: 15px 5px 30px 5px;
+        padding: 10px 25px 10px 15px;
+    }
+    img{
+        margin: 10px;
+        width: 80px;
+    }
+}
+
+#hero{
+    background-image: url('./images/Hero\ Herstel\ Plus-cutout.jpeg');
+    @include backgroundImage();
+    height: 100vh;
+    @include flexMiddle(inline, flex-start);
+    #hero-title{
+        color: white;
+        margin-top: 75px;
+        text-align: center;
+        text-shadow: 2px 2px black;
+    }
+}
+
+#problem-section{
+    @include flexMiddle(column, center);
+    background-color: #e4f7ee;
+    background-image: url('./images/background-cutout.jpeg');
+    @include backgroundImage();
+    padding: $section;
+    h2{
+        text-align: center;
+        margin-bottom: 100px;
+    }
+    #card-container{
+        @include flexMiddle(inline, flex-start);
+    }
+    .explainer-card{
+        box-shadow: $card;
+        width: 70%;
+        height: 400px;
+        border-radius: 15px 15px 100px 0px;
+        margin: 20px;
+        padding: 20px;
+        background-color: #009512;
+        h3, p, li{
+            color: white;
+        }
+    }
+}
+
+#solution-section{
+    @extend #problem-section;
+    background-image: none;
+    background-color: white;
+}
+
+#program-section{
+    @extend #problem-section;
+}
+
+@media only screen and (max-width: 1024px){
+    #hero{
+        height: 39vh;
+    }
+
+    #card-container{
+        flex-wrap: wrap;
+    }
+
+    .explainer-card{
+        height: 300px;
+    }
+
+    p{
+        font-size: 32px;
+    }
+}
+
