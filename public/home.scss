@@ -1,9 +1,9 @@
 $text-color: #524333;
 $title-color: #ff8400;
-$subheading-color: rgb(13, 104, 61);
+$subheading-color: #235c2e;
 $shadow: 0 1px 3px 0 rgb(227, 227, 227), 0 1px 1px 0 rgb(227, 227, 227), 0 2px 1px -1px rgb(227, 227, 227);
 $section: 100px 50px;
-$card: 0 15px 15px 0 rgb(227, 227, 227), 0 15px 5px -10px rgb(227, 227, 227), 0 5px 10px 0 rgb(227, 227, 227);
+$card: 0 5px 3px 0 rgb(227, 227, 227), 0 3px 2px -5px rgb(227, 227, 227), 0 2px 5px 0 rgb(227, 227, 227);
 
 @mixin flexMiddle($direction, $align){
     display: flex;
@@ -18,6 +18,10 @@ $card: 0 15px 15px 0 rgb(227, 227, 227), 0 15px 5px -10px rgb(227, 227, 227), 0 
     background-position: center;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     padding: 0px;
     margin: 0px;
@@ -29,11 +33,12 @@ h1{
 
 h2{
     color: $subheading-color;
-    font-size: 50px;
+    font-size: 60px;
 }
 
 h3{
-    font-size: 40px;
+    color: $subheading-color;
+    font-size: 45px;
 }
 
 p, li{
@@ -59,12 +64,16 @@ footer{
     padding: 20px;
     @include flexMiddle(column, center);
     img{
-        width: 150px;
+        width: 200px;
     }
     div{
         @include flexMiddle(inline, center);
         justify-content: space-evenly; 
         width: 100%;
+    }
+    p{
+        text-align: center;
+        font-weight: 600;
     }
 }
 
@@ -74,15 +83,17 @@ footer{
     background-color: white;
     box-shadow: $shadow;
     height: auto;
-    @include flexMiddle(inline, flex-start);
+    @include flexMiddle(inline, space-between);
+    justify-content: space-between;
+    align-items: center;
     button{
         margin: 10px 10px 10px auto;
         border-radius: 15px 5px 30px 5px;
         padding: 10px 25px 10px 15px;
     }
     img{
-        margin: 10px;
-        width: 80px;
+        margin: 15px;
+        width: 150px;
     }
 }
 
@@ -114,14 +125,27 @@ footer{
     }
     .explainer-card{
         box-shadow: $card;
-        width: 70%;
-        height: 400px;
-        border-radius: 15px 15px 100px 0px;
+        width: 100%;
+        height: 600px;
+        border-radius: 15px;
         margin: 20px;
         padding: 20px;
-        background-color: #009512;
-        h3, p, li{
-            color: white;
+        p{
+            font-size: 40px;
+        }
+    }
+    .problem-title-container{
+        @include flexMiddle(column, center);
+        img{
+            width: 100px;
+            margin-right: 20px;
+        }
+        h3{
+            margin-bottom: 0px;
+            color: black;
+        }
+        p{
+            padding: 0px 30px;
         }
     }
 }
@@ -130,27 +154,61 @@ footer{
     @extend #problem-section;
     background-image: none;
     background-color: white;
+    align-items: flex-start;
+    .solution-text-container{
+        @include flexMiddle(inline, flex-start);
+        align-items: center;
+        margin: 20px 0px;
+        img{
+            width: 250px;
+            margin-right: 50px;
+        }
+        h3{
+            font-size: 50px;
+        }
+    }
 }
 
 #program-section{
     @extend #problem-section;
+    background-position: top;
+    .program-details-container{
+        @include flexMiddle(inline, flex-start);
+        justify-content: flex-start;
+        align-items: center;
+        margin: 20px 0px;
+        border-bottom: 1px solid $title-color;
+        img{
+            width: 50px;
+            margin-right: 50px;
+        }
+        p{
+            font-size: 40px;
+            font-weight: bold;
+        }
+    }
 }
 
 @media only screen and (max-width: 1024px){
     #hero{
-        height: 39vh;
-    }
-
+                height: 39vh;
+            }
     #card-container{
         flex-wrap: wrap;
     }
 
     .explainer-card{
-        height: 300px;
+        height: 350px !important;
     }
 
     p{
         font-size: 32px;
     }
 }
+
+// @media only screen and (max-width: 6300px){
+//     #hero{
+//         height: 39vh;
+//     }
+// }
 
