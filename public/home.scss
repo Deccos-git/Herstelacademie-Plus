@@ -1,9 +1,10 @@
 $text-color: #524333;
 $title-color: #ff8400;
 $subheading-color: #235c2e;
+$background-color: #235c2e;
 $shadow: 0 1px 3px 0 rgb(227, 227, 227), 0 1px 1px 0 rgb(227, 227, 227), 0 2px 1px -1px rgb(227, 227, 227);
 $section: 100px 50px;
-$card: 0 5px 3px 0 rgb(227, 227, 227), 0 3px 2px -5px rgb(227, 227, 227), 0 2px 5px 0 rgb(227, 227, 227);
+$card: 0 2px 2px 0 rgb(227, 227, 227), 0 3px 1px -2px rgb(227, 227, 227), 0 1px 5px 0 rgb(227, 227, 227);
 
 @mixin flexMiddle($direction, $align){
     display: flex;
@@ -14,8 +15,9 @@ $card: 0 5px 3px 0 rgb(227, 227, 227), 0 3px 2px -5px rgb(227, 227, 227), 0 2px 
 
 @mixin backgroundImage(){
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: none;
+    background-position: top;
+
 }
 
 html{
@@ -29,28 +31,33 @@ body{
 
 h1{
     color: $title-color;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 h2{
     color: $subheading-color;
     font-size: 60px;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 h3{
     color: $subheading-color;
     font-size: 45px;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 p, li{
     color: $text-color;
     font-size: 22px;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 button{
-    background-color: $subheading-color;
-    border: $subheading-color;
-    border-radius: 15px;
-    padding: 5px;
+    background-color: $background-color;
+    border: $background-color;
+    border-radius: 15px 5px 30px 5px;
+    padding: 10px 25px 10px 15px;
+    font-size: 25px;
     color: white;
     cursor: pointer;
     &:hover{
@@ -62,6 +69,7 @@ button{
 footer{
     margin: auto 0px 0px 0px;
     padding: 20px;
+    border-top: 3px solid $background-color;
     @include flexMiddle(column, center);
     img{
         width: 200px;
@@ -88,12 +96,10 @@ footer{
     align-items: center;
     button{
         margin: 10px 10px 10px auto;
-        border-radius: 15px 5px 30px 5px;
-        padding: 10px 25px 10px 15px;
     }
     img{
         margin: 15px;
-        width: 150px;
+        width: 200px;
     }
 }
 
@@ -114,25 +120,24 @@ footer{
     @include flexMiddle(column, center);
     background-color: #e4f7ee;
     background-image: url('./images/background-cutout.jpeg');
+    background-color: $background-color;
     @include backgroundImage();
     padding: $section;
     h2{
         text-align: center;
         margin-bottom: 100px;
+        color: white;
     }
     #card-container{
         @include flexMiddle(inline, flex-start);
     }
     .explainer-card{
-        box-shadow: $card;
+        border: 3px solid white;
         width: 100%;
         height: 600px;
         border-radius: 15px;
         margin: 20px;
         padding: 20px;
-        p{
-            font-size: 40px;
-        }
     }
     .problem-title-container{
         @include flexMiddle(column, center);
@@ -142,10 +147,12 @@ footer{
         }
         h3{
             margin-bottom: 0px;
-            color: black;
+            color: white;
         }
         p{
             padding: 0px 30px;
+            font-size: 40px;
+            color: white
         }
     }
 }
@@ -167,6 +174,9 @@ footer{
             font-size: 50px;
         }
     }
+    h2{
+        color: $subheading-color;
+    }
 }
 
 #program-section{
@@ -185,7 +195,25 @@ footer{
         p{
             font-size: 40px;
             font-weight: bold;
+            color: white;
         }
+    }
+    .agenda-card{
+        @extend .explainer-card;
+        width: 90%;
+        background-color: white;
+        margin-top: 50px;
+    }
+    .agenda-card-container{
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+
+#introduction-section{
+    @extend #solution-section;
+    #appointment-container{
+        width: 100%;
     }
 }
 
@@ -198,7 +226,7 @@ footer{
     }
 
     .explainer-card{
-        height: 350px !important;
+        height: 420px !important;
     }
 
     p{

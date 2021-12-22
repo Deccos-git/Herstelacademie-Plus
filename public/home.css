@@ -9,28 +9,33 @@ body {
 
 h1 {
   color: #ff8400;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 h2 {
   color: #235c2e;
   font-size: 60px;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 h3 {
   color: #235c2e;
   font-size: 45px;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 p, li {
   color: #524333;
   font-size: 22px;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 button {
   background-color: #235c2e;
   border: #235c2e;
-  border-radius: 15px;
-  padding: 5px;
+  border-radius: 15px 5px 30px 5px;
+  padding: 10px 25px 10px 15px;
+  font-size: 25px;
   color: white;
   cursor: pointer;
 }
@@ -43,6 +48,7 @@ button:hover {
 footer {
   margin: auto 0px 0px 0px;
   padding: 20px;
+  border-top: 3px solid #235c2e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,20 +124,18 @@ footer p {
 
 #navbar button {
   margin: 10px 10px 10px auto;
-  border-radius: 15px 5px 30px 5px;
-  padding: 10px 25px 10px 15px;
 }
 
 #navbar img {
   margin: 15px;
-  width: 150px;
+  width: 200px;
 }
 
 #hero {
   background-image: url("./images/Hero Herstel Plus-cutout.jpeg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: none;
+  background-position: top;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,7 +159,7 @@ footer p {
   text-shadow: 2px 2px black;
 }
 
-#problem-section, #solution-section, #program-section {
+#problem-section, #solution-section, #introduction-section, #program-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,18 +175,20 @@ footer p {
           align-items: center;
   background-color: #e4f7ee;
   background-image: url("./images/background-cutout.jpeg");
+  background-color: #235c2e;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: none;
+  background-position: top;
   padding: 100px 50px;
 }
 
-#problem-section h2, #solution-section h2, #program-section h2 {
+#problem-section h2, #solution-section h2, #introduction-section h2, #program-section h2 {
   text-align: center;
   margin-bottom: 100px;
+  color: white;
 }
 
-#problem-section #card-container, #solution-section #card-container, #program-section #card-container {
+#problem-section #card-container, #solution-section #card-container, #introduction-section #card-container, #program-section #card-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,9 +204,8 @@ footer p {
           align-items: flex-start;
 }
 
-#problem-section .explainer-card, #solution-section .explainer-card, #program-section .explainer-card {
-  -webkit-box-shadow: 0 5px 3px 0 #e3e3e3, 0 3px 2px -5px #e3e3e3, 0 2px 5px 0 #e3e3e3;
-          box-shadow: 0 5px 3px 0 #e3e3e3, 0 3px 2px -5px #e3e3e3, 0 2px 5px 0 #e3e3e3;
+#problem-section .explainer-card, #solution-section .explainer-card, #introduction-section .explainer-card, #program-section .explainer-card, #program-section .agenda-card {
+  border: 3px solid white;
   width: 100%;
   height: 600px;
   border-radius: 15px;
@@ -208,11 +213,7 @@ footer p {
   padding: 20px;
 }
 
-#problem-section .explainer-card p, #solution-section .explainer-card p, #program-section .explainer-card p {
-  font-size: 40px;
-}
-
-#problem-section .problem-title-container, #solution-section .problem-title-container, #program-section .problem-title-container {
+#problem-section .problem-title-container, #solution-section .problem-title-container, #introduction-section .problem-title-container, #program-section .problem-title-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -228,21 +229,23 @@ footer p {
           align-items: center;
 }
 
-#problem-section .problem-title-container img, #solution-section .problem-title-container img, #program-section .problem-title-container img {
+#problem-section .problem-title-container img, #solution-section .problem-title-container img, #introduction-section .problem-title-container img, #program-section .problem-title-container img {
   width: 100px;
   margin-right: 20px;
 }
 
-#problem-section .problem-title-container h3, #solution-section .problem-title-container h3, #program-section .problem-title-container h3 {
+#problem-section .problem-title-container h3, #solution-section .problem-title-container h3, #introduction-section .problem-title-container h3, #program-section .problem-title-container h3 {
   margin-bottom: 0px;
-  color: black;
+  color: white;
 }
 
-#problem-section .problem-title-container p, #solution-section .problem-title-container p, #program-section .problem-title-container p {
+#problem-section .problem-title-container p, #solution-section .problem-title-container p, #introduction-section .problem-title-container p, #program-section .problem-title-container p {
   padding: 0px 30px;
+  font-size: 40px;
+  color: white;
 }
 
-#solution-section {
+#solution-section, #introduction-section {
   background-image: none;
   background-color: white;
   -webkit-box-align: start;
@@ -250,7 +253,7 @@ footer p {
           align-items: flex-start;
 }
 
-#solution-section .solution-text-container {
+#solution-section .solution-text-container, #introduction-section .solution-text-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -270,13 +273,17 @@ footer p {
   margin: 20px 0px;
 }
 
-#solution-section .solution-text-container img {
+#solution-section .solution-text-container img, #introduction-section .solution-text-container img {
   width: 250px;
   margin-right: 50px;
 }
 
-#solution-section .solution-text-container h3 {
+#solution-section .solution-text-container h3, #introduction-section .solution-text-container h3 {
   font-size: 50px;
+}
+
+#solution-section h2, #introduction-section h2 {
+  color: #235c2e;
 }
 
 #program-section {
@@ -315,6 +322,22 @@ footer p {
 #program-section .program-details-container p {
   font-size: 40px;
   font-weight: bold;
+  color: white;
+}
+
+#program-section .agenda-card {
+  width: 90%;
+  background-color: white;
+  margin-top: 50px;
+}
+
+#program-section .agenda-card-container {
+  width: 100%;
+  margin-top: 50px;
+}
+
+#introduction-section #appointment-container {
+  width: 100%;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -325,8 +348,8 @@ footer p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .explainer-card {
-    height: 350px !important;
+  .explainer-card, #program-section .agenda-card {
+    height: 420px !important;
   }
   p {
     font-size: 32px;
