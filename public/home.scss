@@ -3,7 +3,6 @@ $title-color: #ff8400;
 $subheading-color: #235c2e;
 $background-color: #235c2e;
 $shadow: 0 1px 3px 0 rgb(227, 227, 227), 0 1px 1px 0 rgb(227, 227, 227), 0 2px 1px -1px rgb(227, 227, 227);
-$section: 100px 50px;
 $card: 0 2px 2px 0 rgb(227, 227, 227), 0 3px 1px -2px rgb(227, 227, 227), 0 1px 5px 0 rgb(227, 227, 227);
 
 @mixin flexMiddle($direction, $align){
@@ -14,10 +13,9 @@ $card: 0 2px 2px 0 rgb(227, 227, 227), 0 3px 1px -2px rgb(227, 227, 227), 0 1px 
 }
 
 @mixin backgroundImage(){
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: none;
-    background-position: top;
-
+    background-position: center;
 }
 
 html{
@@ -89,6 +87,7 @@ footer{
     position: sticky;
     top: 0px;
     background-color: white;
+    z-index: 5;
     box-shadow: $shadow;
     height: auto;
     @include flexMiddle(inline, space-between);
@@ -106,8 +105,8 @@ footer{
 #hero{
     background-image: url('./images/Hero\ Herstel\ Plus-cutout.jpeg');
     @include backgroundImage();
-    height: 100vh;
     @include flexMiddle(inline, flex-start);
+    height: 800px;
     #hero-title{
         color: white;
         margin-top: 75px;
@@ -117,19 +116,18 @@ footer{
 }
 
 #problem-section{
-    @include flexMiddle(column, center);
-    background-color: #e4f7ee;
     background-image: url('./images/background-cutout.jpeg');
-    background-color: $background-color;
     @include backgroundImage();
-    padding: $section;
+    @include flexMiddle(column, center);
+    background-color: $background-color;
     h2{
         text-align: center;
-        margin-bottom: 100px;
+        margin: 150px 30px;
         color: white;
     }
     #card-container{
         @include flexMiddle(inline, flex-start);
+        margin-bottom: 100px;
     }
     .explainer-card{
         border: 3px solid white;
@@ -181,7 +179,12 @@ footer{
 
 #program-section{
     @extend #problem-section;
-    background-position: top;
+    h2{
+        margin: 200px 30px 0px 30px;
+    }
+    #program-details-outer-container{
+        margin: 10px 50px;
+    }
     .program-details-container{
         @include flexMiddle(inline, flex-start);
         justify-content: flex-start;
@@ -203,40 +206,74 @@ footer{
         width: 90%;
         background-color: white;
         margin-top: 50px;
+        height: 450px;
+        button{
+            margin-top: 20px;
+        }
     }
     .agenda-card-container{
         width: 100%;
-        margin-top: 50px;
+        margin: 50px 50px 100px 50px;
+        @include flexMiddle(inline, flex-start);
     }
 }
 
 #introduction-section{
     @extend #solution-section;
+    @include flexMiddle(column, center);
+    h2{
+        text-align: center;
+    }
     #appointment-container{
         width: 100%;
     }
+    #location-container{
+        @include flexMiddle(column, center);
+        margin-bottom: 100px;
+        img{
+            width: 50px;
+        }
+        p{
+            font-weight: bold;
+        }
+    }
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1050px){
+
     #hero{
-                height: 39vh;
-            }
+        height: 600px;
+    }
+
+    #problem-section{
+        background-position: top;
+        background-size: 100%;
+        h2{
+            margin: 100px 30px;
+        }
+    }
+
+    .agenda-card-container{
+        flex-wrap: wrap;
+    }
+
     #card-container{
         flex-wrap: wrap;
     }
 
     .explainer-card{
-        height: 420px !important;
+        height: 420px;
+    }
+
+    h2{
+        font-size: 60px;
+    }
+
+    h3{
+        font-size: 45px;
     }
 
     p{
         font-size: 32px;
     }
 }
-
-// @media only screen and (max-width: 6300px){
-//     #hero{
-//         height: 39vh;
-//     }
-// }
-

@@ -98,6 +98,7 @@ footer p {
   position: sticky;
   top: 0px;
   background-color: white;
+  z-index: 5;
   -webkit-box-shadow: 0 1px 3px 0 #e3e3e3, 0 1px 1px 0 #e3e3e3, 0 2px 1px -1px #e3e3e3;
           box-shadow: 0 1px 3px 0 #e3e3e3, 0 1px 1px 0 #e3e3e3, 0 2px 1px -1px #e3e3e3;
   height: auto;
@@ -133,10 +134,9 @@ footer p {
 
 #hero {
   background-image: url("./images/Hero Herstel Plus-cutout.jpeg");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: none;
-  background-position: top;
-  height: 100vh;
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,6 +150,7 @@ footer p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  height: 800px;
 }
 
 #hero #hero-title {
@@ -160,6 +161,10 @@ footer p {
 }
 
 #problem-section, #solution-section, #introduction-section, #program-section {
+  background-image: url("./images/background-cutout.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,18 +178,12 @@ footer p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #e4f7ee;
-  background-image: url("./images/background-cutout.jpeg");
   background-color: #235c2e;
-  background-repeat: no-repeat;
-  background-size: none;
-  background-position: top;
-  padding: 100px 50px;
 }
 
 #problem-section h2, #solution-section h2, #introduction-section h2, #program-section h2 {
   text-align: center;
-  margin-bottom: 100px;
+  margin: 150px 30px;
   color: white;
 }
 
@@ -202,6 +201,7 @@ footer p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-bottom: 100px;
 }
 
 #problem-section .explainer-card, #solution-section .explainer-card, #introduction-section .explainer-card, #program-section .explainer-card, #program-section .agenda-card {
@@ -286,8 +286,12 @@ footer p {
   color: #235c2e;
 }
 
-#program-section {
-  background-position: top;
+#program-section h2 {
+  margin: 200px 30px 0px 30px;
+}
+
+#program-section #program-details-outer-container {
+  margin: 10px 50px;
 }
 
 #program-section .program-details-container {
@@ -329,27 +333,107 @@ footer p {
   width: 90%;
   background-color: white;
   margin-top: 50px;
+  height: 450px;
+}
+
+#program-section .agenda-card button {
+  margin-top: 20px;
 }
 
 #program-section .agenda-card-container {
   width: 100%;
-  margin-top: 50px;
+  margin: 50px 50px 100px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: inline;
+          flex-direction: inline;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#introduction-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#introduction-section h2 {
+  text-align: center;
 }
 
 #introduction-section #appointment-container {
   width: 100%;
 }
 
-@media only screen and (max-width: 1024px) {
+#introduction-section #location-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 100px;
+}
+
+#introduction-section #location-container img {
+  width: 50px;
+}
+
+#introduction-section #location-container p {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1050px) {
   #hero {
-    height: 39vh;
+    height: 600px;
+  }
+  #problem-section, #solution-section, #introduction-section, #program-section {
+    background-position: top;
+    background-size: 100%;
+  }
+  #problem-section h2, #solution-section h2, #introduction-section h2, #program-section h2 {
+    margin: 100px 30px;
+  }
+  .agenda-card-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   #card-container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
   .explainer-card, #program-section .agenda-card {
-    height: 420px !important;
+    height: 420px;
+  }
+  h2 {
+    font-size: 60px;
+  }
+  h3 {
+    font-size: 45px;
   }
   p {
     font-size: 32px;
