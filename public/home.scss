@@ -106,7 +106,7 @@ footer{
     background-image: url('./images/Hero\ Herstel\ Plus-cutout.jpeg');
     @include backgroundImage();
     @include flexMiddle(inline, flex-start);
-    height: 800px;
+    height: 870px;
     margin-bottom: 50px;
     #hero-title{
         color: white;
@@ -150,9 +150,9 @@ footer{
         h3{
             margin-bottom: 0px;
             color: white;
+            text-align: left;
         }
         p{
-            padding: 0px 30px;
             font-size: 40px;
             color: white
         }
@@ -164,10 +164,9 @@ footer{
     background-image: none;
     background-color: white;
     align-items: flex-start;
+    @include flexMiddle(column, center);
     .solution-text-container{
         @include flexMiddle(inline, flex-start);
-        align-items: center;
-        margin: 20px 0px;
         img{
             width: 250px;
             margin-right: 50px;
@@ -245,6 +244,7 @@ footer{
         }
         p{
             font-weight: bold;
+            padding: 10px 20px;
         }
     }
 }
@@ -252,7 +252,7 @@ footer{
 @media only screen and (max-width: 1050px){
 
     #hero{
-        height: 600px;
+        height: 400px;
     }
 
     #problem-section{
@@ -260,8 +260,31 @@ footer{
         background-size: 100%;
     }
 
+    .solution-text-container{
+        flex-direction: column;
+        align-items: center !important;
+        margin: 20px 20px !important;
+        text-align: center !important;
+    }
+
+    #problem-section-inner-container{
+        margin-top: 100px !important;
+    }
+
     .agenda-card-container{
         flex-wrap: wrap;
+    }
+
+    #navbar{
+        justify-content: center !important;
+    }
+
+    #navbar img{
+        width: 100px !important;
+    }
+
+    #navbar button{
+        display: none;
     }
 
     #card-container{
@@ -269,18 +292,23 @@ footer{
     }
 
     .explainer-card{
-        height: 420px;
+        height: 420px !important;
     }
 
     h2{
-        font-size: 60px;
+        font-size: 35px !important;
     }
 
     h3{
-        font-size: 45px;
+        font-size: 25px !important;
     }
 
     p{
-        font-size: 32px;
+        font-size: 22px !important;
     }
+
+    footer img{
+        width: 100px;
+    }
+
 }
