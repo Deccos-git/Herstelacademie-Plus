@@ -151,6 +151,7 @@ footer p {
       -ms-flex-align: start;
           align-items: flex-start;
   height: 800px;
+  margin-bottom: 50px;
 }
 
 #hero #hero-title {
@@ -178,12 +179,16 @@ footer p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#problem-section #problem-section-inner-container, #solution-section #problem-section-inner-container, #introduction-section #problem-section-inner-container, #program-section #problem-section-inner-container {
   background-color: #235c2e;
+  margin-top: 250px;
 }
 
 #problem-section h2, #solution-section h2, #introduction-section h2, #program-section h2 {
   text-align: center;
-  margin: 150px 30px;
+  margin: 0px 50px 100px 50px;
   color: white;
 }
 
@@ -206,7 +211,7 @@ footer p {
 
 #problem-section .explainer-card, #solution-section .explainer-card, #introduction-section .explainer-card, #program-section .explainer-card, #program-section .agenda-card {
   border: 3px solid white;
-  width: 100%;
+  width: 80%;
   height: 600px;
   border-radius: 15px;
   margin: 20px;
@@ -284,10 +289,20 @@ footer p {
 
 #solution-section h2, #introduction-section h2 {
   color: #235c2e;
+  margin-top: 100px;
+}
+
+#program-section {
+  background-image: none;
+}
+
+#program-section #program-section-inner-container {
+  background-color: #235c2e;
+  margin-top: 150px;
 }
 
 #program-section h2 {
-  margin: 200px 30px 0px 30px;
+  margin: 100px 30px 100px 30px;
 }
 
 #program-section #program-details-outer-container {
@@ -330,7 +345,7 @@ footer p {
 }
 
 #program-section .agenda-card {
-  width: 90%;
+  width: 80%;
   background-color: white;
   margin-top: 50px;
   height: 450px;
@@ -342,7 +357,7 @@ footer p {
 
 #program-section .agenda-card-container {
   width: 100%;
-  margin: 50px 50px 100px 50px;
+  margin: 50px 0px 100px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,9 +429,6 @@ footer p {
   #problem-section, #solution-section, #introduction-section, #program-section {
     background-position: top;
     background-size: 100%;
-  }
-  #problem-section h2, #solution-section h2, #introduction-section h2, #program-section h2 {
-    margin: 100px 30px;
   }
   .agenda-card-container {
     -ms-flex-wrap: wrap;

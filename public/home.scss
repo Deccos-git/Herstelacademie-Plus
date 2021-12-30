@@ -107,6 +107,7 @@ footer{
     @include backgroundImage();
     @include flexMiddle(inline, flex-start);
     height: 800px;
+    margin-bottom: 50px;
     #hero-title{
         color: white;
         margin-top: 75px;
@@ -119,10 +120,13 @@ footer{
     background-image: url('./images/background-cutout.jpeg');
     @include backgroundImage();
     @include flexMiddle(column, center);
-    background-color: $background-color;
+    #problem-section-inner-container{
+        background-color: $background-color;
+        margin-top: 250px;
+    }
     h2{
         text-align: center;
-        margin: 150px 30px;
+        margin: 0px 50px 100px 50px;
         color: white;
     }
     #card-container{
@@ -131,7 +135,7 @@ footer{
     }
     .explainer-card{
         border: 3px solid white;
-        width: 100%;
+        width: 80%;
         height: 600px;
         border-radius: 15px;
         margin: 20px;
@@ -174,13 +178,19 @@ footer{
     }
     h2{
         color: $subheading-color;
+        margin-top: 100px;
     }
 }
 
 #program-section{
     @extend #problem-section;
+    background-image: none;
+    #program-section-inner-container{
+        background-color: $background-color;
+        margin-top: 150px;
+    }
     h2{
-        margin: 200px 30px 0px 30px;
+        margin: 100px 30px 100px 30px;
     }
     #program-details-outer-container{
         margin: 10px 50px;
@@ -203,7 +213,7 @@ footer{
     }
     .agenda-card{
         @extend .explainer-card;
-        width: 90%;
+        width: 80%;
         background-color: white;
         margin-top: 50px;
         height: 450px;
@@ -213,7 +223,7 @@ footer{
     }
     .agenda-card-container{
         width: 100%;
-        margin: 50px 50px 100px 50px;
+        margin: 50px 0px 100px 0px;
         @include flexMiddle(inline, flex-start);
     }
 }
@@ -248,9 +258,6 @@ footer{
     #problem-section{
         background-position: top;
         background-size: 100%;
-        h2{
-            margin: 100px 30px;
-        }
     }
 
     .agenda-card-container{
