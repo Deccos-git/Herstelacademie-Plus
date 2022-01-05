@@ -30,18 +30,22 @@ body{
 h1{
     color: $title-color;
     font-family: 'Fira Sans', sans-serif;
+    font-size: 50px;
+    margin: 20px;
 }
 
 h2{
     color: $subheading-color;
-    font-size: 60px;
+    font-size: 40px;
     font-family: 'Fira Sans', sans-serif;
+    margin: 20px;
 }
 
 h3{
     color: $subheading-color;
-    font-size: 45px;
+    font-size: 30px;
     font-family: 'Fira Sans', sans-serif;
+    margin: 20px;
 }
 
 p, li{
@@ -107,7 +111,6 @@ footer{
     @include backgroundImage();
     @include flexMiddle(inline, flex-start);
     height: 870px;
-    margin-bottom: 50px;
     #hero-title{
         color: white;
         margin-top: 75px;
@@ -120,13 +123,14 @@ footer{
     background-image: url('./images/background-cutout.jpeg');
     @include backgroundImage();
     @include flexMiddle(column, center);
+    margin-top: 100px;
     #problem-section-inner-container{
         background-color: $background-color;
+        width: 100%;
         margin-top: 250px;
     }
     h2{
         text-align: center;
-        margin: 0px 50px 100px 50px;
         color: white;
     }
     #card-container{
@@ -153,7 +157,6 @@ footer{
             text-align: left;
         }
         p{
-            font-size: 40px;
             color: white
         }
     }
@@ -161,6 +164,7 @@ footer{
 
 #solution-section{
     @extend #problem-section;
+    margin-top: 0px;
     background-image: none;
     background-color: white;
     align-items: flex-start;
@@ -172,7 +176,7 @@ footer{
             margin-right: 50px;
         }
         h3{
-            font-size: 50px;
+            font-size: 35px;
         }
     }
     h2{
@@ -183,10 +187,12 @@ footer{
 
 #program-section{
     @extend #problem-section;
+    margin-top: 0px;
     background-image: none;
     #program-section-inner-container{
         background-color: $background-color;
         margin-top: 150px;
+        width: 100%;
     }
     h2{
         margin: 100px 30px 100px 30px;
@@ -205,7 +211,7 @@ footer{
             margin-right: 50px;
         }
         p{
-            font-size: 40px;
+            font-size: 30px;
             font-weight: bold;
             color: white;
         }
@@ -249,7 +255,7 @@ footer{
     }
 }
 
-@media only screen and (max-width: 1050px){
+@media only screen and (max-width: 513px){
 
     #hero{
         height: 400px;
@@ -260,15 +266,39 @@ footer{
         background-size: 100%;
     }
 
+    h1{
+        font-size: 35px;
+    }
+
+    h2{
+        font-size: 30px !important;
+    }
+
+    h3{
+        font-size: 25px !important;
+    }
+
+    p{
+        font-size: 20px !important;
+    }
+
+    button{
+        font-size: 20px;
+    }
+
+    #problem-section-inner-container{
+        margin-top: 50px !important;
+    }
+
+    footer img{
+        width: 100px;
+    }
+
     .solution-text-container{
         flex-direction: column;
         align-items: center !important;
         margin: 20px 20px !important;
         text-align: center !important;
-    }
-
-    #problem-section-inner-container{
-        margin-top: 100px !important;
     }
 
     .agenda-card-container{
@@ -295,8 +325,21 @@ footer{
         height: 420px !important;
     }
 
+
+}
+
+@media only screen and (min-width: 513px) and (max-width: 700px){
+
+    #hero{
+        height: 500px;
+    }
+
+    h1{
+        font-size: 35px;
+    }
+
     h2{
-        font-size: 35px !important;
+        font-size: 30px !important;
     }
 
     h3{
@@ -304,11 +347,263 @@ footer{
     }
 
     p{
-        font-size: 22px !important;
+        font-size: 20px !important;
+    }
+
+    button{
+        font-size: 20px;
+    }
+
+    #problem-section-inner-container{
+        margin-top: 100px !important;
+    }
+
+    #problem-section{
+        background-position: top;
+        background-size: 100%;
     }
 
     footer img{
         width: 100px;
     }
 
+    .solution-text-container{
+        flex-direction: column;
+        align-items: center !important;
+        margin: 20px 20px !important;
+        text-align: center !important;
+    }
+
+    .agenda-card-container{
+        flex-wrap: wrap;
+    }
+
+    #navbar{
+        justify-content: center !important;
+    }
+
+    #navbar img{
+        width: 100px !important;
+    }
+
+    #navbar button{
+        display: none;
+    }
+
+    #card-container{
+        flex-wrap: wrap;
+    }
+
+    .explainer-card{
+        height: 420px !important;
+    }
+
 }
+
+@media only screen and (min-width: 700px) and (max-width: 850px){
+
+    #hero{
+        height: 500px;
+    }
+
+    h1{
+        font-size: 35px;
+    }
+
+    h2{
+        font-size: 30px !important;
+    }
+
+    h3{
+        font-size: 25px !important;
+    }
+
+    p{
+        font-size: 20px !important;
+    }
+
+    button{
+        font-size: 20px;
+    }
+
+    footer img{
+        width: 100px;
+    }
+
+    #problem-section{
+        background-position: top;
+        background-size: 100%;
+        h2{
+            margin-top: -150px;
+        }
+    }
+
+    #solution-section{
+        h2{
+            margin-top: 0px;
+        }
+    }
+
+    #introduction-section{
+        h2{
+            margin-top: 0px;
+        }
+    }
+
+    .solution-text-container{
+        flex-direction: column;
+        align-items: center !important;
+        margin: 20px 20px !important;
+        text-align: center !important;
+    }
+
+    .agenda-card-container{
+        flex-wrap: wrap;
+    }
+
+    #navbar{
+        justify-content: center !important;
+    }
+
+    #navbar img{
+        width: 100px !important;
+    }
+
+    #navbar button{
+        display: none;
+    }
+
+    #card-container{
+        flex-wrap: wrap;
+    }
+
+    .explainer-card{
+        height: 420px !important;
+    }
+
+}
+
+@media only screen and (min-width: 850px) and (max-width: 1050px){
+
+    #hero{
+        height: 600px;
+    }
+
+    #problem-section{
+        background-position: top;
+        background-size: 100%;
+        h2{
+            margin-top: -125px;
+        }
+    }
+
+    #solution-section{
+        h2{
+            margin-top: 0px;
+        }
+    }
+
+    #introduction-section{
+        h2{
+            margin-top: 0px;
+        }
+    }
+
+    .solution-text-container{
+        flex-direction: column;
+        align-items: center !important;
+        margin: 20px 20px !important;
+        text-align: center !important;
+    }
+
+    .agenda-card-container{
+        flex-wrap: wrap;
+    }
+
+    #navbar{
+        justify-content: center !important;
+    }
+
+    #navbar img{
+        width: 100px !important;
+    }
+
+    #navbar button{
+        display: none;
+    }
+
+    #card-container{
+        flex-wrap: wrap;
+    }
+
+    .explainer-card{
+        height: 420px !important;
+    }
+
+}
+
+@media only screen and (min-width: 1050px) {
+
+    #hero{
+        height: 1100px;
+    }
+
+    #problem-section{
+        background-position: top;
+        background-size: 100%;
+        h2{
+            margin-top: -125px;
+        }
+    }
+
+    #solution-section{
+        h2{
+            margin-top: 0px !important;
+        }
+    }
+
+    #introduction-section{
+        h2{
+            margin-top: 0px !important;
+        }
+    }
+
+    .solution-text-container{
+        flex-direction: column;
+        align-items: center !important;
+        margin: 20px 20px !important;
+        text-align: center !important;
+    }
+
+    .agenda-card-container{
+        flex-wrap: wrap;
+    }
+
+    #navbar{
+        justify-content: center !important;
+    }
+
+    #navbar img{
+        width: 100px !important;
+    }
+
+    #navbar button{
+        display: none;
+    }
+
+    #card-container{
+        flex-wrap: wrap;
+    }
+
+    .explainer-card{
+        height: 420px !important;
+    }
+
+}
+
+
+
+    
+
+   
+

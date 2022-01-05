@@ -10,18 +10,22 @@ body {
 h1 {
   color: #ff8400;
   font-family: 'Fira Sans', sans-serif;
+  font-size: 50px;
+  margin: 20px;
 }
 
 h2 {
   color: #235c2e;
-  font-size: 60px;
+  font-size: 40px;
   font-family: 'Fira Sans', sans-serif;
+  margin: 20px;
 }
 
 h3 {
   color: #235c2e;
-  font-size: 45px;
+  font-size: 30px;
   font-family: 'Fira Sans', sans-serif;
+  margin: 20px;
 }
 
 p, li {
@@ -151,7 +155,6 @@ footer p {
       -ms-flex-align: start;
           align-items: flex-start;
   height: 870px;
-  margin-bottom: 50px;
 }
 
 #hero #hero-title {
@@ -179,16 +182,17 @@ footer p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 100px;
 }
 
 #problem-section #problem-section-inner-container, #solution-section #problem-section-inner-container, #introduction-section #problem-section-inner-container, #program-section #problem-section-inner-container {
   background-color: #235c2e;
+  width: 100%;
   margin-top: 250px;
 }
 
 #problem-section h2, #solution-section h2, #introduction-section h2, #program-section h2 {
   text-align: center;
-  margin: 0px 50px 100px 50px;
   color: white;
 }
 
@@ -246,11 +250,11 @@ footer p {
 }
 
 #problem-section .problem-title-container p, #solution-section .problem-title-container p, #introduction-section .problem-title-container p, #program-section .problem-title-container p {
-  font-size: 40px;
   color: white;
 }
 
 #solution-section, #introduction-section {
+  margin-top: 0px;
   background-image: none;
   background-color: white;
   -webkit-box-align: start;
@@ -293,7 +297,7 @@ footer p {
 }
 
 #solution-section .solution-text-container h3, #introduction-section .solution-text-container h3 {
-  font-size: 50px;
+  font-size: 35px;
 }
 
 #solution-section h2, #introduction-section h2 {
@@ -302,12 +306,14 @@ footer p {
 }
 
 #program-section {
+  margin-top: 0px;
   background-image: none;
 }
 
 #program-section #program-section-inner-container {
   background-color: #235c2e;
   margin-top: 150px;
+  width: 100%;
 }
 
 #program-section h2 {
@@ -348,7 +354,7 @@ footer p {
 }
 
 #program-section .program-details-container p {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   color: white;
 }
@@ -432,13 +438,34 @@ footer p {
   padding: 10px 20px;
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 513px) {
   #hero {
     height: 400px;
   }
   #problem-section, #solution-section, #introduction-section, #program-section {
     background-position: top;
     background-size: 100%;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 30px !important;
+  }
+  h3 {
+    font-size: 25px !important;
+  }
+  p {
+    font-size: 20px !important;
+  }
+  button {
+    font-size: 20px;
+  }
+  #problem-section-inner-container {
+    margin-top: 50px !important;
+  }
+  footer img {
+    width: 100px;
   }
   .solution-text-container {
     -webkit-box-orient: vertical;
@@ -450,9 +477,6 @@ footer p {
             align-items: center !important;
     margin: 20px 20px !important;
     text-align: center !important;
-  }
-  #problem-section-inner-container {
-    margin-top: 100px !important;
   }
   .agenda-card-container {
     -ms-flex-wrap: wrap;
@@ -476,17 +500,243 @@ footer p {
   .explainer-card, #program-section .agenda-card {
     height: 420px !important;
   }
+}
+
+@media only screen and (min-width: 513px) and (max-width: 700px) {
+  #hero {
+    height: 500px;
+  }
+  h1 {
+    font-size: 35px;
+  }
   h2 {
-    font-size: 35px !important;
+    font-size: 30px !important;
   }
   h3 {
     font-size: 25px !important;
   }
   p {
-    font-size: 22px !important;
+    font-size: 20px !important;
+  }
+  button {
+    font-size: 20px;
+  }
+  #problem-section-inner-container {
+    margin-top: 100px !important;
+  }
+  #problem-section, #solution-section, #introduction-section, #program-section {
+    background-position: top;
+    background-size: 100%;
   }
   footer img {
     width: 100px;
+  }
+  .solution-text-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    margin: 20px 20px !important;
+    text-align: center !important;
+  }
+  .agenda-card-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #navbar {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  #navbar img {
+    width: 100px !important;
+  }
+  #navbar button {
+    display: none;
+  }
+  #card-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .explainer-card, #program-section .agenda-card {
+    height: 420px !important;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 850px) {
+  #hero {
+    height: 500px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 30px !important;
+  }
+  h3 {
+    font-size: 25px !important;
+  }
+  p {
+    font-size: 20px !important;
+  }
+  button {
+    font-size: 20px;
+  }
+  footer img {
+    width: 100px;
+  }
+  #problem-section, #solution-section, #introduction-section, #program-section {
+    background-position: top;
+    background-size: 100%;
+  }
+  #problem-section h2, #solution-section h2, #introduction-section h2, #program-section h2 {
+    margin-top: -150px;
+  }
+  #solution-section h2, #introduction-section h2 {
+    margin-top: 0px;
+  }
+  #introduction-section h2 {
+    margin-top: 0px;
+  }
+  .solution-text-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    margin: 20px 20px !important;
+    text-align: center !important;
+  }
+  .agenda-card-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #navbar {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  #navbar img {
+    width: 100px !important;
+  }
+  #navbar button {
+    display: none;
+  }
+  #card-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .explainer-card, #program-section .agenda-card {
+    height: 420px !important;
+  }
+}
+
+@media only screen and (min-width: 850px) and (max-width: 1050px) {
+  #hero {
+    height: 600px;
+  }
+  #problem-section, #solution-section, #introduction-section, #program-section {
+    background-position: top;
+    background-size: 100%;
+  }
+  #problem-section h2, #solution-section h2, #introduction-section h2, #program-section h2 {
+    margin-top: -125px;
+  }
+  #solution-section h2, #introduction-section h2 {
+    margin-top: 0px;
+  }
+  #introduction-section h2 {
+    margin-top: 0px;
+  }
+  .solution-text-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    margin: 20px 20px !important;
+    text-align: center !important;
+  }
+  .agenda-card-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #navbar {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  #navbar img {
+    width: 100px !important;
+  }
+  #navbar button {
+    display: none;
+  }
+  #card-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .explainer-card, #program-section .agenda-card {
+    height: 420px !important;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  #hero {
+    height: 1100px;
+  }
+  #problem-section, #solution-section, #introduction-section, #program-section {
+    background-position: top;
+    background-size: 100%;
+  }
+  #problem-section h2, #solution-section h2, #introduction-section h2, #program-section h2 {
+    margin-top: -125px;
+  }
+  #solution-section h2, #introduction-section h2 {
+    margin-top: 0px !important;
+  }
+  #introduction-section h2 {
+    margin-top: 0px !important;
+  }
+  .solution-text-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    margin: 20px 20px !important;
+    text-align: center !important;
+  }
+  .agenda-card-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #navbar {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  #navbar img {
+    width: 100px !important;
+  }
+  #navbar button {
+    display: none;
+  }
+  #card-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .explainer-card, #program-section .agenda-card {
+    height: 420px !important;
   }
 }
 /*# sourceMappingURL=home.css.map */
