@@ -596,10 +596,13 @@ footer p {
     margin-top: -150px;
   }
   #solution-section h2, #introduction-section h2 {
-    margin-top: 0px;
+    margin-top: 100px !important;
+  }
+  #program-section h2 {
+    margin-top: 100px !important;
   }
   #introduction-section h2 {
-    margin-top: 0px;
+    margin: 100px !important;
   }
   .solution-text-container {
     -webkit-box-orient: vertical;
@@ -648,10 +651,13 @@ footer p {
     margin-top: -125px;
   }
   #solution-section h2, #introduction-section h2 {
-    margin-top: 0px;
+    margin-top: 100px !important;
+  }
+  #program-section h2 {
+    margin-top: 100px !important;
   }
   #introduction-section h2 {
-    margin-top: 0px;
+    margin: 100px !important;
   }
   .solution-text-container {
     -webkit-box-orient: vertical;
@@ -700,10 +706,13 @@ footer p {
     margin-top: -125px;
   }
   #solution-section h2, #introduction-section h2 {
-    margin-top: 0px !important;
+    margin-top: 100px !important;
+  }
+  #program-section h2 {
+    margin-top: 100px !important;
   }
   #introduction-section h2 {
-    margin-top: 0px !important;
+    margin: 100px !important;
   }
   .solution-text-container {
     -webkit-box-orient: vertical;
