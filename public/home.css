@@ -121,6 +121,11 @@ footer p {
   width: 200px;
 }
 
+#menu-items-container{
+  display: flex;
+  align-items: center;
+}
+
 #menu-items-container a{
   color: #235c2e;
   margin-right: 20px;
@@ -133,6 +138,16 @@ footer p {
   color: #ff8400
 }
 
+.menu-item-inner-container{
+  display: flex;
+}
+
+.menu-item-inner-container img{
+  height: 10px !important;
+  width: 10px !important;
+  margin: 0px 5px 0px 0px !important;
+}
+
 #hero{
   background-image: url('./images/Hero\ Herstel\ Plus-cutout.jpeg');
   background-size: cover;
@@ -140,7 +155,7 @@ footer p {
   background-position: center;
   display: flex;
   flex-direction: column;
-  height: 870px;
+  height: 1100px;
 }
 
 #hero-title{
@@ -152,9 +167,9 @@ footer p {
 
 #problem-section{
   background-image: url('./images/background-cutout.jpeg');
-  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
+  background-size: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,7 +179,7 @@ footer p {
 #problem-section h2{
   text-align: center;
   color: white;
-  margin: -75px 20px 100px 10px;
+  margin: -150px 20px 100px 10px;
 }
 
 .explainer-card{
@@ -198,7 +213,7 @@ footer p {
 
 #card-container{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   margin-bottom: 100px;
 }
 
@@ -348,6 +363,12 @@ footer p {
       margin-top: 50px;
   }
 
+  #problem-section-inner-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   #problem-section h2 {
     margin: 5px 20px 10px 10px;
   }
@@ -382,6 +403,10 @@ footer p {
 
   footer img{
       width: 100px;
+  }
+
+  #solution-section{
+    align-items: center;
   }
 
   .solution-text-container{
@@ -452,6 +477,16 @@ footer p {
       background-size: 100%;
   }
 
+  #problem-section-inner-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #problem-section h2{
+    margin: 0px 20px 50px 10px;
+  }
+
   footer img{
       width: 100px;
   }
@@ -461,6 +496,10 @@ footer p {
       align-items: center !important;
       margin: 20px 20px !important;
       text-align: center !important;
+  }
+
+  #solution-section{
+    align-items: center;
   }
 
   .agenda-card-container{
@@ -481,10 +520,6 @@ footer p {
 
   #card-container{
       flex-wrap: wrap;
-  }
-
-  .explainer-card{
-      height: 420px !important;
   }
 
 }
@@ -524,6 +559,12 @@ footer p {
       background-size: 100%;
   }
 
+  #problem-section-inner-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   #problem-section h2{
     margin-top: -150px;
   }
@@ -532,8 +573,8 @@ footer p {
       margin-top: 100px !important;
   }
 
-  #program-section h2{
-      margin-top: 100px !important;
+  #solution-section{
+    align-items: center;
   }
 
   #introduction-section h2{
@@ -565,10 +606,6 @@ footer p {
 
   #card-container{
       flex-wrap: wrap;
-  }
-
-  .explainer-card{
-      height: 420px !important;
   }
 
 }
@@ -584,6 +621,10 @@ footer p {
       background-size: 100%;
   }
 
+  #solution-section{
+    align-items: center;
+  }
+
   #problem-section  h2{
     margin-top: -125px;
   }
@@ -592,9 +633,6 @@ footer p {
       margin-top: 100px !important;
   }
 
-  #program-section h2{
-      margin-top: 100px !important;
-  }
 
   #introduction-section h2{
       margin: 100px !important;
@@ -627,68 +665,5 @@ footer p {
       flex-wrap: wrap;
   }
 
-  .explainer-card{
-      height: 420px !important;
-  }
-
 }
 
-@media only screen and (min-width: 1050px) {
-
-  #hero{
-      height: 1100px;
-  }
-
-  #problem-section{
-    background-position: top;
-    background-size: 100%;
-  }
-
-  #problem-section  h2{
-    margin-top: -125px;
-  }
-
-  #solution-section h2{
-      margin-top: 100px !important;
-  }
-
-  #program-section h2{
-      margin-top: 100px !important;
-  }
-
-  #introduction-section h2{
-      margin: 100px !important;
-  }
-
-  .solution-text-container{
-      flex-direction: column;
-      align-items: center !important;
-      margin: 20px 20px !important;
-      text-align: center !important;
-  }
-
-  .agenda-card-container{
-      flex-wrap: wrap;
-  }
-
-  #navbar{
-      justify-content: center !important;
-  }
-
-  #navbar img{
-      width: 100px !important;
-  }
-
-  #navbar button{
-      display: none;
-  }
-
-  #card-container{
-      flex-wrap: wrap;
-  }
-
-  .explainer-card{
-      height: 420px !important;
-  }
-
-}
