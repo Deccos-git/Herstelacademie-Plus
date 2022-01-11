@@ -255,9 +255,9 @@ footer p {
 
 #program-section{
   background-image: url('./images/background-cutout.jpeg');
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -265,7 +265,7 @@ footer p {
 }
   
 #program-section h2{
-    margin: 0px 30px 100px 30px;
+    margin: -100px 30px 100px 30px;
     color: white;
     text-align: center;
 }
@@ -361,6 +361,15 @@ footer p {
       background-position: top;
       background-size: 100%;
       margin-top: 50px;
+  }
+
+  #program-section {
+    background-size: 100%;
+    background-position: top;
+  }
+
+  #program-section h2{
+    margin-top: -100px;
   }
 
   #problem-section-inner-container{
@@ -487,6 +496,15 @@ footer p {
     margin: 0px 20px 50px 10px;
   }
 
+  #program-section {
+    background-size: 100%;
+    background-position: top;
+  }
+
+  #program-section h2{
+    margin-top: -100px;
+  }
+
   footer img{
       width: 100px;
   }
@@ -569,6 +587,15 @@ footer p {
     margin-top: -150px;
   }
 
+  #program-section {
+    background-size: 100%;
+    background-position: top;
+  }
+
+  #program-section h2{
+    margin-top: -100px;
+  }
+
   #solution-section h2{
       margin-top: 100px !important;
   }
@@ -633,6 +660,14 @@ footer p {
       margin-top: 100px !important;
   }
 
+  #program-section {
+    background-size: 100%;
+    background-position: top;
+  }
+
+  #program-section h2{
+    margin-top: -100px;
+  }
 
   #introduction-section h2{
       margin: 100px !important;
