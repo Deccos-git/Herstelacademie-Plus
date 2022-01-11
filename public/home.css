@@ -369,7 +369,11 @@ footer p {
   }
 
   #program-section h2{
-    margin-top: -100px;
+    margin-top: -50px;
+  }
+
+  #program-section-inner-container {
+    margin-top: 150px;
   }
 
   #problem-section-inner-container{
