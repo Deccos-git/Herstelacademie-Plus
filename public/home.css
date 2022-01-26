@@ -127,7 +127,7 @@ footer p {
 }
 
 #menu-items-container a{
-  color: #235c2e;
+  color: #524333;
   margin-right: 20px;
   text-decoration: none;
   font-size: 22px;
@@ -135,7 +135,7 @@ footer p {
 }
 
 #menu-items-container a:hover{
-  color: #ff8400
+  color: #ff8400;
 }
 
 .menu-item-inner-container{
@@ -251,6 +251,7 @@ footer p {
 
 .solution-text-container h3{
   font-size: 30px;
+  color: #235c2e;
 }
 
 #program-section{
@@ -276,6 +277,47 @@ footer p {
   align-items: center;
   margin: 20px 0px;
   border-bottom: 1px solid #ff8400;
+}
+
+.program-details-container-coach-info{
+  margin: 20px 0px;
+  border-bottom: 1px solid #ff8400;
+}
+
+.program-details-text-container p{
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.program-details-container-icon{
+  width: 50px;
+  margin-right: 50px;
+}
+
+.program-details-text-container{
+  display: flex;
+  align-items: center;
+}
+
+.program-detail-coach-container{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.program-detail-coach-container p{
+  color: white;
+  margin: 10px 20px 10px 100px;
+}
+
+.program-detail-coach-container img{
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border: 2px solid white;
 }
 
 .program-details-container img{
@@ -315,6 +357,14 @@ footer p {
   padding: 20px;
 }
 
+.agenda-card h3{
+  color: #235c2e;
+}
+
+.agenda-card p{
+  color: #235c2e;
+}
+
 .agenda-card button{
   margin-bottom: 0px;
   margin-top: auto;
@@ -349,6 +399,59 @@ footer p {
 #location-container p{
   font-weight: bold;
   padding: 10px 20px;
+}
+
+#contact-section{
+  background-color: #235c2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-section h2{
+  color: white;
+  margin: 100px 20px 50px 20px;
+}
+
+.contact-detail-container img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.contact-detail-container{
+  margin: 30px;
+  border-bottom: 1px solid #ff8400;
+  padding-bottom: 30px;
+}
+
+.contact-detail-container h2{
+  color: white;
+}
+
+.contact-detail-container p{
+  color: white;
+}
+
+.contact-detail-container h3{
+  color: white;
+}
+
+.contact-person-container{
+  display: flex;
+  align-items: center;
+}
+
+.contact-person-container img{
+  margin-right: 20px;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+#contact-section-inner-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 @media only screen and (max-width: 513px){
@@ -451,7 +554,16 @@ footer p {
 
   #solution-section h2 {
     width: auto;
-}
+  }
+
+  .program-detail-coach-container{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .program-detail-coach-container img{
+    margin-left: 100px;
+  }
 
 }
 
@@ -540,8 +652,21 @@ footer p {
       display: none;
   }
 
+  #menu-items-container{
+    display: none;
+  }
+
   #card-container{
       flex-wrap: wrap;
+  }
+
+  .program-detail-coach-container img{
+    margin-left: 100px;
+  }
+
+  .program-detail-coach-container{
+    flex-direction: column;
+    align-items: flex-start;
   }
 
 }
@@ -635,8 +760,22 @@ footer p {
       display: none;
   }
 
+  #menu-items-container{
+    display: none;
+  }
+
   #card-container{
       flex-wrap: wrap;
+      align-items: flex-start;
+  }
+
+  .program-detail-coach-container{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .program-detail-coach-container img{
+    margin-left: 100px;
   }
 
 }
