@@ -42,7 +42,7 @@ button {
   font-size: 22px;
   color: white;
   cursor: pointer;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 button:hover {
@@ -131,7 +131,7 @@ footer p {
   margin-right: 20px;
   text-decoration: none;
   font-size: 22px;
-  font-weight: bold;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 #menu-items-container a:hover{
